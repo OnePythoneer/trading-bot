@@ -1,0 +1,30 @@
+watchlist:
+  BTC-USD:  { name: Bitcoin,   type: crypto }
+  ETH-USD:  { name: Ethereum,  type: crypto }
+  SOL-USD:  { name: Solana,    type: crypto }
+  AAPL:     { name: Apple,     type: stock  }
+  NVDA:     { name: Nvidia,    type: stock  }
+  MSFT:     { name: Microsoft, type: stock  }
+
+portfolio:
+  starting_capital: 10000.0
+
+strategy:
+  ema_fast: 9
+  ema_slow: 21
+  rsi_period: 14
+  rsi_overbought: 70
+  rsi_oversold: 30
+
+risk:
+  position_size_pct: 0.05
+  stop_loss_pct: 0.03
+  take_profit_pct: 0.06
+
+data:
+  period: "60d"
+  interval: "1h"
+
+scan_interval: 300
+trades_log: "paper_trades.csv"
+log_file: "trading_bot.log"
