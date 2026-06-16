@@ -1,6 +1,6 @@
 # trading-bot
 
-A paper trading bot for crypto and stocks. Uses EMA crossover (9/21) filtered by RSI to generate buy and sell signals. No real money — simulated P&L only.
+A paper trading bot for crypto and stocks. Uses EMA crossover (9/21) filtered by RSI to generate buy and sell signals with simulated pnl. 
 
 ## Setup
 
@@ -36,10 +36,9 @@ SCAN_INTERVAL = 300        # seconds between scans
 
 ## Notes
 
-- Paper mode only. No brokerage connection, no real orders.
+- Paper mode only, no brokerage connection.
 - Runs until stopped with Ctrl+C.
 - Logs all trades to `paper_trades.csv` in the same folder.
 
----
 
-Built by [NullPointer](https://nullpointer-consulting.netlify.app) · hire.nullpointer@proton.me
+ [NullPointer](https://nullpointer-consulting.netlify.app) · hire.nullpointer@proton.me
