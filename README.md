@@ -5,7 +5,7 @@ A paper trading bot for crypto and stocks. Uses EMA crossover (9/21) filtered by
 ## Setup
 
 ```bash
-pip install yfinance pandas ta-lib schedule colorama
+pip install yfinance pandas ta schedule colorama pyyaml
 ```
 
 ## Run
@@ -26,12 +26,14 @@ Fetches hourly OHLCV data for a configurable watchlist, computes EMA9, EMA21 and
 
 ## Configuration
 
-Edit the top section of `trading_bot.py`:
+Edit `config.yaml`:
 
-```python
-WATCHLIST = { ... }        # tickers to track
-POSITION_SIZE_PCT = 0.05   # 5% of portfolio per trade
-SCAN_INTERVAL = 300        # seconds between scans
+```yaml
+watchlist:
+  BTC-USD: { name: Bitcoin, type: crypto }   # tickers to track
+risk:
+  position_size_pct: 0.05                    # 5% of portfolio per trade
+scan_interval: 300                           # seconds between scans
 ```
 
 ## Notes
@@ -41,4 +43,4 @@ SCAN_INTERVAL = 300        # seconds between scans
 - Logs all trades to `paper_trades.csv` in the same folder.
 
 
- [NullPointer](https://nullpointer-consulting.netlify.app) · hire.nullpointer@proton.me
+NullPointer · hire.nullpointer@proton.me
